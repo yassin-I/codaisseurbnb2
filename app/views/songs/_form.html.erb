@@ -16,4 +16,7 @@
 
   <%= f.submit (@song.new_record? ? "Create" : "Update") %>
 
+  <%= f.label :artist_id %>
+  <%= f.collection_select(:artist_id, Artist.all, :id, :music_genre) %>
+
 <% end %>
